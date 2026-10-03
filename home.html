@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Story | Paceline</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Announcement bar -->
+    <div class="announcement">
+        <p>FREE UK DELIVERY OVER £75 . 30-DAY RETURNS</p>
+        <p class="highlight">AUTUMN '26 - NEW ARRIVALS DROPPING WEEKLY</P>
+        <p>STORE: GLASGOW . EN / £ GBP</p>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-inner">
+            <a href="home.html" class="logo">PACELINE</a>
+
+            <nav aria-label="Main">
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="#">Men</a></li>
+                    <li><a href="#">Women</a></li>
+                    <li><a href="#">Footwear</a></li>
+                    <li><a href="#">Apparel</a></li>
+                    <li><a href="#">Brands</a></li>
+                    <li><a href="#">Sale</a></li>
+                    <li><a href="about.html" class="active">About</a></li>
+                </ul>
+            </nav>
+            <!-- Icons-->
+            <div class="icons">
+                <button aria-label="Search">🔍</button>
+                <button aria-label="Account">👤</button>
+                <button aria-label="Cart" class="cart-btn">🛒<span class="cart-count">2</span></button>
+                <button aria-label="Open menu" class="menu-button" id="menu-button" aria-expanded="false">☰</button>
+
+            </div>
+
+        </div>
+    </header>
+    <main>
+        <section class="hero" aria-label="Featured collection">
+            <img class="slide active" src="images/hero.png" alt="" width="1600" height="900">
+            <img class="slide" src="images/hero.png" alt="" width="1600" height="900" loading="lazy">
+            <img class="slide" src="images/hero.png" alt="" width="1600" height="900" loading="lazy">
+     
+        <div class="hero-overlay">
+         <div class="container hero-content">
+            <p class="hero-label">Autumn / Winter '26 Collection</p>
+            <h1>Chase<br>Every Second.</h1>
+            <p class="hero-text">Race-day gear, trail-tested essentials, and everyday kit —
+                curated by runners, worn on every terrain.</p>
+            <div class="hero-buttons">
+                <a href="#new-arrivals" class="btn btn-primary">SHOP NEW ARRIVALS →</a>
+                <a href="about.html" class="btn btn-ghost">READ OUR STORY</a>
+            </div>
+         </div>
+        <div class="dots" role="group" aria-label="Choose slide">
+            <button class="dot active" aria-label="Show slide 1"></button>
+            <button class="dot" aria-label="Show slide 2"></button>
+            <button class="dot" aria-label="Show slide 3"></button>
+        </div>
+        </div>
+        </section>
+
+        <!-- 01 Shop by category -->
+        <section class="categories">
+            <div class="container">
+        
+                <div class="section-head">
+                    <div>
+                        <p class="label">01 · Shop by category</p>
+                        <h2>Every discipline. Every distance.</h2>
+                    </div>
+                    <a href="#" class="view-all">VIEW ALL COLLECTIONS →</a>
+                </div>
+        
+            </div>
+        
+        <div class="category-grid">
+        
+            <a href="#" class="category-card">
+                <img src="images/road.png" alt="" width="400" height="530" loading="lazy">
+                <div class="category-text">
+                    <h3>Road Running</h3>
+                    <p>Speed, cushion, race-day.</p>
+                    <span class="shop-link">SHOP →</span>
+                </div>
+            </a>
+        
+        <a href="#" class="category-card">
+            <img src="images/trail running.png" alt="" width="400" height="530" loading="lazy">
+            <div class="category-text">
+                <h3>Trail Running</h3>
+                <p>Grip, protection, adventure.</p>
+                <span class="shop-link">SHOP →</span>
+            </div>
+        </a>
+        
+        <a href="#" class="category-card">
+            <img src="images/apparel.png" alt="" width="400" height="530" loading="lazy">
+            <div class="category-text">
+                <h3>Apparel</h3>
+                <p>Layers built for every mile.</p>
+                <span class="shop-link">SHOP →</span>
+            </div>
+        </a>
+        
+        <a href="#" class="category-card">
+            <img src="images/accessories.png" alt="" width="400" height="530" loading="lazy">
+            <div class="category-text">
+                <h3>Accessories</h3>
+                <p>Watches, packs, fuel.</p>
+                <span class="shop-link">SHOP →</span>
+            </div>
+        </a>
+        </div>
+        </section>
+        <!-- 02 New arrivals -->
+        <section class="arrivals" id="new-arrivals">
+            <div class="container">
+        
+                <div class="section-head">
+                    <div>
+                        <p class="label">02 · Just landed</p>
+                        <h2>New arrivals for the run.</h2>
+                    </div>
+        
+                    <!-- Filter pills -->
+                    <div class="pills" role="group" aria-label="Filter products">
+                        <button class="pill active" data-filter="new" aria-pressed="true">New In</button>
+                        <button class="pill" data-filter="best" aria-pressed="false">Best Sellers</button>
+                        <button class="pill" data-filter="race" aria-pressed="false">Race Day</button>
+                        <button class="pill" data-filter="trail" aria-pressed="false">Trail</button>
+                    </div>
+                </div>
+        
+                <!-- Screen readers announce this when the filter changes -->
+                <p id="filter-status" class="visually-hidden" role="status"></p>
+        
+                <div class="product-grid">
+        
+                    <article class="product" data-tags="new best">
+                        <div class="product-image">
+                            <img src="images/arrivals.png" alt="ON Cloudmonster 3 running shoe in Hyper Lily" width="400"
+                                height="500" loading="lazy">
+                            <span class="tag tag-new">NEW</span>
+                            <button class="heart" aria-label="Save Cloudmonster 3 to wishlist" aria-pressed="false">♡</button>
+                        </div>
+                        <p class="product-brand">ON</p>
+                        <h3 class="product-name">Cloudmonster 3 — Hyper Lily</h3>
+                        <p class="product-price">£210</p>
+                    </article>
+        
+                    <article class="product" data-tags="new race">
+                        <div class="product-image">
+                            <img src="images/arrivals.png" alt="Nike Vaporfly 4 running shoe in Volt Ice" width="400" height="500"
+                                loading="lazy">
+                            <span class="tag tag-new">NEW</span>
+                            <button class="heart" aria-label="Save Vaporfly 4 to wishlist" aria-pressed="false">♡</button>
+                        </div>
+                        <p class="product-brand">Nike</p>
+                        <h3 class="product-name">Vaporfly 4 — Volt Ice</h3>
+                        <p class="product-price">£240</p>
+                    </article>
+        
+                    <article class="product" data-tags="new trail">
+                        <div class="product-image">
+                            <img src="images/arrivals.png" alt="Hoka Tecton X 4 trail shoe in Frost and Tangerine" width="400"
+                                height="500" loading="lazy">
+                            <span class="tag tag-new">NEW</span>
+                            <button class="heart" aria-label="Save Tecton X 4 to wishlist" aria-pressed="false">♡</button>
+                        </div>
+                        <p class="product-brand">Hoka</p>
+                        <h3 class="product-name">Tecton X 4 — Frost / Tangerine</h3>
+                        <p class="product-price">£220</p>
+                    </article>
+        
+                    <article class="product" data-tags="new race">
+                        <div class="product-image">
+                            <img src="images/arrivals.png" alt="Asics Megablast running shoe in White and Orange Glow" width="400"
+                                height="500" loading="lazy">
+                            <span class="tag tag-sale">SALE</span>
+                            <button class="heart" aria-label="Save Megablast to wishlist" aria-pressed="false">♡</button>
+                        </div>
+                        <p class="product-brand">Asics</p>
+                        <h3 class="product-name">Megablast — White / Orange Glow</h3>
+                        <p class="product-price">£210</p>
+                    </article>
+        
+                    <article class="product" data-tags="best">
+                        <div class="product-image">
+                            <img src="images/arrivals.png" alt="Brooks Ghost 17 running shoe" width="400" height="500"
+                                loading="lazy">
+                            <button class="heart" aria-label="Save Ghost 17 to wishlist" aria-pressed="false">♡</button>
+                        </div>
+                        <p class="product-brand">Brooks</p>
+                        <h3 class="product-name">Ghost 17 — Midnight</h3>
+                        <p class="product-price">£150</p>
+                    </article>
+        
+                    <article class="product" data-tags="best race">
+                        <div class="product-image">
+                            <img src="images/arrivals.png" alt="Saucony Endorphin Speed running shoe" width="400" height="500"
+                                loading="lazy">
+                            <button class="heart" aria-label="Save Endorphin Speed to wishlist" aria-pressed="false">♡</button>
+                        </div>
+                        <p class="product-brand">Saucony</p>
+                        <h3 class="product-name">Endorphin Speed 5 — Black</h3>
+                        <p class="product-price">£170</p>
+                    </article>
+        
+                    <article class="product" data-tags="best trail">
+                        <div class="product-image">
+                            <img src="images/arrivals.png" alt="Salomon Speedcross trail shoe" width="400" height="500"
+                                loading="lazy">
+                            <button class="heart" aria-label="Save Speedcross to wishlist" aria-pressed="false">♡</button>
+                        </div>
+                        <p class="product-brand">Salomon</p>
+                        <h3 class="product-name">Speedcross 7 — Forest</h3>
+                        <p class="product-price">£140</p>
+                    </article>
+        
+                    <article class="product" data-tags="trail">
+                        <div class="product-image">
+                            <img src="images/arrivals.png" alt="Altra Lone Peak trail shoe" width="400" height="500"
+                                loading="lazy">
+                            <button class="heart" aria-label="Save Lone Peak to wishlist" aria-pressed="false">♡</button>
+                        </div>
+                        <p class="product-brand">Altra</p>
+                        <h3 class="product-name">Lone Peak 9 — Sand</h3>
+                        <p class="product-price">£135</p>
+                    </article>
+        
+                </div>
+            </div>
+        </section>
+        <!-- 03 Our story -->
+        <section class="story">
+            <img class="story-photo" src="images/story.png" alt="Runner standing on a rocky summit above the clouds" width="800"
+                height="700" loading="lazy">
+        
+            <div class="story-text">
+                <p class="label label-lime">Our story</p>
+                <h2>Built by runners.<br>Worn on every terrain.</h2>
+        
+                <p class="story-copy">
+                    PACELINE opened in 2015 with one goal — to become an all-inclusive hub for
+                    runners. Twenty seasons in, we still hand-pick every shoe, every layer and
+                    every accessory in our range. From your first Couch-to-5K to your third
+                    marathon, we prepare, empower and equip you with zero compromise on
+                    performance or style.
+                </p>
+        
+                <div class="stats">
+                    <div>
+                        <span class="stat-number">10+</span>
+                        <span class="stat-label">Years in sport</span>
+                    </div>
+                    <div>
+                        <span class="stat-number">40+</span>
+                        <span class="stat-label">Brands stocked</span>
+                    </div>
+                    <div>
+                        <span class="stat-number">1</span>
+                        <span class="stat-label">Store in Glasgow</span>
+                    </div>
+                </div>
+        
+                <a href="about.html" class="btn btn-ghost">READ THE FULL STORY →</a>
+            </div>
+        </section>
+        <!-- 04 Promo cards -->
+        <section class="promos">
+            <div class="container promo-grid">
+        
+                <a href="#" class="promo">
+                    <img src="images/male.png" alt="" width="800" height="600" loading="lazy">
+                    <div class="promo-text">
+                        <h2>Men's Running</h2>
+                        <p>Pace-ready kit from race-day heroes.</p>
+                        <span class="shop-link">SHOP NOW →</span>
+                    </div>
+                </a>
+        
+                <a href="#" class="promo">
+                    <img src="images/female.png" alt="" width="800" height="600" loading="lazy">
+                    <div class="promo-text">
+                        <h2>Women's Running</h2>
+                        <p>20% of profits go to Girls Run Glasgow.</p>
+                        <span class="shop-link">SHOP NOW →</span>
+                    </div>
+                </a>
+        
+            </div>
+        </section>
+    </main>
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <div class="container newsletter-inner">
+            <div>
+                <h2>Join the Paceline club.</h2>
+                <p>Early access to new drops, race-day tips, and 10% off your first order.</p>
+            </div>
+    
+            <form id="newsletter-form" novalidate>
+                <label for="email" class="visually-hidden">Email address</label>
+                <div class="newsletter-row">
+                    <input type="email" id="email" placeholder="your@email.com" aria-describedby="email-message">
+                    <button type="submit" class="btn-lime">SUBSCRIBE</button>
+                </div>
+                <p id="email-message" class="form-message" role="status"></p>
+            </form>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+    
+                <div class="footer-brand">
+                    <a href="index.html" class="logo logo-light">PACELINE</a>
+                    <p>Race-day gear, trail-tested essentials, and everyday running kit —
+                        curated in Glasgow since 2015.</p>
+                </div>
+    
+                <nav aria-label="Shop">
+                    <h3 class="footer-title">SHOP</h3>
+                    <ul>
+                        <li><a href="#">Men's</a></li>
+                        <li><a href="#">Women's</a></li>
+                        <li><a href="#">Footwear</a></li>
+                        <li><a href="#">Apparel</a></li>
+                        <li><a href="#">Accessories</a></li>
+                        <li><a href="#">Sale</a></li>
+                    </ul>
+                </nav>
+    
+                <nav aria-label="Help">
+                    <h3 class="footer-title">HELP</h3>
+                    <ul>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Shipping</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">Size Guides</a></li>
+                        <li><a href="#">Gait Analysis</a></li>
+                        <li><a href="#">FAQs</a></li>
+                    </ul>
+                </nav>
+    
+                <nav aria-label="Company">
+                    <h3 class="footer-title">COMPANY</h3>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="#">Store · Glasgow</a></li>
+                        <li><a href="#">Sustainability</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Wholesale</a></li>
+                        <li><a href="#">Press</a></li>
+                    </ul>
+                </nav>
+    
+                <nav aria-label="Follow us">
+                    <h3 class="footer-title">FOLLOW</h3>
+                    <ul>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">Strava</a></li>
+                        <li><a href="#">TikTok</a></li>
+                        <li><a href="#">YouTube</a></li>
+                        <li><a href="#">Newsletter</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </nav>
+    
+            </div>
+    
+            <div class="footer-bottom">
+                <p>&copy; 2026 Paceline Running Co. — All rights reserved.</p>
+                <ul>
+                    <li><a href="#">Privacy</a></li>
+                    <li><a href="#">Terms</a></li>
+                    <li><a href="#">Cookies</a></li>
+                    <li><a href="#">Accessibility</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script src="main.js"></script>
+    </body>
+    

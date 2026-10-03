@@ -693,3 +693,445 @@ input:focus-visible {
         justify-content: space-between;
     }
 }
+/* ===== HOME PAGE: Hero ===== */
+.hero {
+    position: relative;
+    height: 75vh;
+    min-height: 460px;
+    color: var(--white);
+    overflow: hidden;
+}
+
+.slide {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.8s ease;
+}
+
+.slide.active {
+    opacity: 1;
+}
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.1));
+}
+.hero-content {
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero-label {
+    color: var(--lime);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+.hero h1 {
+    font-size: clamp(5rem, 13vw, 7.5rem);
+    font-weight: 1200;
+    letter-spacing: -0.04em;
+    line-height: 0.95;
+    color:#eee;
+}
+
+.hero-text {
+    max-width: 440px;
+    margin: 20px 0 28px;
+    font-size: 0.95rem;
+    color: #eee;
+}
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.btn-primary {
+    background: var(--lime);
+    border-color: var(--lime);
+    color: var(--dark);
+}
+
+.btn-ghost {
+    background: transparent;
+    border-color: var(--white);
+    color: var(--white);
+}
+
+.btn-primary:hover {
+    background: var(--white);
+    border-color: var(--white);
+}
+
+.btn-ghost:hover {
+    background: var(--white);
+    color: var(--dark);
+}
+.dots {
+    position: absolute;
+    right: 4%;
+    bottom: 16px;
+    display: flex;
+    gap: 6px;
+}
+
+.dot {
+    width: 32px;
+    height: 24px;
+    padding: 10px 0;
+    background: rgba(255, 255, 255, 0.45);
+    background-clip: content-box;
+    border: 0;
+    cursor: pointer;
+}
+
+.dot.active {
+    background: var(--white);
+    background-clip: content-box;
+}
+/* ===== HOME PAGE: Categories ===== */
+.categories {
+    padding: 60px 0;
+}
+
+.section-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 32px;
+}
+
+.view-all {
+    font-size: 0.7rem;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    color: var(--dark);
+    text-decoration: none;
+}
+
+.view-all:hover {
+    color: var(--orange);
+}
+.category-card {
+    position: relative;
+    display: block;
+    aspect-ratio: 3 / 4;
+    overflow: hidden;
+    color: var(--white);
+    text-decoration: none;
+}
+
+.category-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.category-text {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 16px;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+}
+
+.category-text h3 {
+    font-size: 1.1rem;
+}
+
+.category-text p {
+    font-size: 0.75rem;
+    opacity: 0.9;
+}
+
+.shop-link {
+    display: inline-block;
+    margin-top: 6px;
+    font-size: 0.65rem;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    color: var(--lime);
+}
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+}
+
+@media (min-width: 768px) {
+    .category-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+.category-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.category-card:hover img {
+    transform: scale(1.05);
+}
+/* ===== HOME PAGE: New arrivals ===== */
+/* The hidden attribute must always win, even over our own display rules */
+[hidden] {
+    display: none !important;
+}
+
+.arrivals {
+    padding: 60px 0;
+}
+
+/* Filter pills */
+.pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.pill {
+    padding: 8px 16px;
+    border: 1px solid #b9b09f;
+    border-radius: 999px;
+    background: transparent;
+    color: var(--dark);
+    font-size: 0.75rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.pill:hover {
+    border-color: var(--dark);
+}
+
+.pill.active {
+    background: var(--dark);
+    border-color: var(--dark);
+    color: var(--white);
+}
+
+/* Product grid */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px 14px;
+    /* row gap, column gap */
+}
+
+.product-image {
+    position: relative;
+    aspect-ratio: 4 / 5;
+    background: #ddd;
+    /* shows while the picture loads */
+    overflow: hidden;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* NEW / SALE badge, top-left */
+.tag {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    padding: 4px 8px;
+    font-size: 0.6rem;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+}
+
+.tag-new {
+    background: var(--dark);
+    color: var(--lime);
+}
+
+.tag-sale {
+    background: var(--orange);
+    color: var(--white);
+}
+
+/* Wishlist heart, top-right */
+.heart {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 36px;
+    height: 36px;
+    border: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.85);
+    font-size: 1.1rem;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.heart.saved {
+    color: var(--orange);
+}
+
+/* Text under each picture */
+.product-brand {
+    margin-top: 12px;
+    font-size: 0.7rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #777;
+}
+
+.product-name {
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-top: 2px;
+}
+
+.product-price {
+    font-size: 0.9rem;
+    font-weight: 800;
+    margin-top: 4px;
+}
+
+@media (min-width: 1024px) {
+    .product-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+/* ===== HOME PAGE: Our story ===== */
+.story {
+    display: grid;
+    grid-template-columns: 1fr;
+    /* phone: picture above, text below */
+    background: var(--dark);
+    color: var(--white);
+}
+
+.story-photo {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.story-text {
+    padding: 48px 4%;
+}
+
+.story-text h2 {
+    margin: 8px 0 20px;
+}
+
+.story-copy {
+    max-width: 520px;
+    font-size: 0.9rem;
+    color: #ccc;
+}
+
+.stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px 40px;
+    margin: 32px 0;
+    /* this space fixes the overlap in the design */
+}
+
+.stat-number {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 800;
+    line-height: 1;
+    color: var(--lime);
+}
+
+.stat-label {
+    font-size: 0.65rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #aaa;
+}
+
+@media (min-width: 768px) {
+    .story {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .story-photo {
+        height: 100%;
+        min-height: 480px;
+    }
+
+    .story-text {
+        align-self: center;
+        padding: 60px 8%;
+    }
+}
+/* ===== HOME PAGE: Promo cards ===== */
+.promos {
+    padding: 60px 0;
+}
+
+.promo-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+}
+
+.promo {
+    position: relative;
+    display: block;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    color: var(--white);
+    text-decoration: none;
+}
+
+.promo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.promo:hover img {
+    transform: scale(1.05);
+}
+
+.promo-text {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 24px;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+}
+
+.promo-text h2 {
+    font-size: clamp(1.6rem, 5vw, 2.4rem);
+    margin: 0;
+}
+
+.promo-text p {
+    font-size: 0.85rem;
+    margin-top: 4px;
+}
+
+@media (min-width: 768px) {
+    .promo-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
